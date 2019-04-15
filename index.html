@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="style.css">
+    <title>Sign-up Page</title>
+</head>
+<body>
+    
+    <div class="main">
+        <h4>Sign Up</h4>
+        <form class="inputs">
+            <label for="email">Email<input pattern="^([A-Za-z0-9{1}.]+@[A-Za-z0-9{1}]+\.(com|net))$" aria-required="true" required="required" id="email" minlength="5" title="E-mail - Minimum 5 characters." class="email" type="text" placeholder="email"></label>
+            <label for="password">Password<input pattern="^((?=.*\d)(?=.*\!||\?||\#||\$||\%||\@)(?=.*[a-z])(?=.*[A-Z]).{8,})$" aria-required="true" required="required" id="password" minlength="5" title="Password - Minimum 5 characters." class="password" type="password" placeholder="password"></label>
+        </form>
+        <button onclick="submit()">Submit</button>
+    </div>
+    <div class="requirements">
+        <p>Passwords must contain at least:</p>
+        <p id="length">8 characters in length</p>
+        <p id="capital">one capital letter A-Z</p>
+        <p id="lowercase">one lowercase letter a-z</p>
+        <p id="symbol">one symbol (@,!,?,#,$,%), or number 0-9</p>
+    </div>
+    <p class="udisp">Your username is: <p id="test"></p></p>
+    <script src="script.js"></script>
+</body>
+</html>
